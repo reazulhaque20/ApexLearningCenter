@@ -22,10 +22,12 @@
    <link rel="stylesheet" href="assets/css/elegent-icons.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="assets/js/angularjs/css/ng-table.min.css">
+   <link rel="stylesheet" href="assets/js/angularjs/css/sweet-alert.css">
    <!-- css end  here-->
 </head>
 
-<body>
+<body ng-controller="indexCtrl">
    <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
       <![endif]-->
@@ -34,24 +36,8 @@
    <div class="tp-preloader">
       <div class="tp-preloader__center">
          <span>
-            <svg width="170" height="132" viewBox="0 0 170 132" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <g clip-path="url(#clip0_6_12)">
-                  <path
-                     d="M113.978 61.1738L55.4552 2.8186C52.8594 0.230266 48.7298 0.230266 46.252 2.8186L1.88784 46.4673C-0.707934 49.0557 -0.707934 53.1735 1.88784 55.6441L14.5127 68.2329L66.9002 120.353L113.86 75.7626C118.108 71.8801 118.108 65.2916 113.978 61.1738Z"
-                     fill="black" />
-                  <path
-                     d="M167.781 51.5263L90.2621 129.059C86.1325 133.177 79.6431 133.177 75.5134 129.059L31.6212 85.2923C35.7509 89.4101 42.2403 89.4101 46.37 85.2923L123.889 7.75996C126.485 5.17163 130.615 5.17163 133.092 7.75996L167.663 42.2319C170.377 44.8202 170.377 48.938 167.781 51.5263Z"
-                     fill="#5392FB" />
-                  <path
-                     d="M74.9235 35.0551C76.6933 36.8199 78.4632 38.467 79.9971 39.8788C82.1209 41.6436 82.2389 44.8202 80.233 46.8203L48.8478 78.1156C44.1282 82.8217 36.4588 82.8217 31.7392 78.1156C27.0197 73.4095 27.0197 65.7622 31.7392 61.0561L63.1245 29.7608C65.1303 27.7607 68.3161 27.8784 70.0859 29.9961C71.5018 31.5256 73.1536 33.2904 74.9235 35.0551Z"
-                     fill="currentColor" class="path-yellow" />
-               </g>
-               <defs>
-                  <clipPath id="clip0_6_12">
-                     <rect width="169.787" height="131.064" fill="white" transform="translate(0 0.936172)" />
-                  </clipPath>
-               </defs>
-            </svg>
+
+            <img src="assets/img/logo/preloader.gif" alt="Apex Learning">
 
          </span>
       </div>
@@ -84,8 +70,7 @@
                                        class="fa-regular fa-location-dot"></i> CHANDORA, KALIAKOIR, GAZIPUR, BANGLADESH</a>
                               </li>
                               <li>
-                                 <i class="fa-regular fa-clock"></i> Sat
-                                    - Thu 8.00 - 16.30
+                                 <i class="fa-regular fa-clock"></i> Sat - Thu 8.00 - 16.30
                               </li>
                            </ul>
                         </div>
@@ -104,20 +89,6 @@
                            </div>
                         </div>
                      </div>
-
-                     <!-- <div class="col-xxl-6 col-xl-4 col-lg-4 col-md-4">
-                        <div class="tp-header__top-right d-flex justify-content-end align-items-center">
-                           <div class="tp-header__account">
-                              <ul>
-                                 <li><a href="#"><i class="fal fa-user"></i>Bangla</a></li>
-                                 <li>|</li>
-                                 <li><a href="#">English</a></li>
-
-                              </ul>
-                           </div>
-                        </div>
-                     </div> -->
-
                   </div>
                </div>
             </div>
@@ -137,7 +108,7 @@
                      </div>
                      
                      <div class="col-xxl-7 col-xl-7 col-lg-9 col-md-6 col-6 d-none d-lg-block">
-                        <div class="main-menu text-end">
+                        <div class="main-menu">
                            <nav id="mobile-menu">
                               <ul>
                                  <li >
@@ -209,23 +180,17 @@
                            </nav>
                         </div>
                      </div>
-                     <!-- <div class="col-xxl-2 col-xl-2 col-lg-3 col-md-6 col-6">
-                        <div class="tp-header__main-right d-flex justify-content-end align-items-center">
-                           <div class="header-acttion-btns d-flex align-items-center d-none d-md-flex">
-                              <a href="sign-in.html" class="tp-btn">
-                                 <span>Try for free <i class="fa-regular fa-arrow-right"></i> </span>
-                                 <div class="transition"></div>
-                              </a>
-                           </div>
-                           <div class="tp-header__hamburger ml-50 d-lg-none">
-                              <button class="hamburger-btn offcanvas-open-btn">
-                                 <span></span>
-                                 <span></span>
-                                 <span></span>
-                              </button>
-                           </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-6 col-6">
+                     <div class="tp-header__main-right d-flex justify-content-end align-items-center pl-30">
+                        <div class="tp-header__hamburger ml-50 d-lg-none">
+                           <button class="hamburger-btn offcanvas-open-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                           </button>
                         </div>
-                     </div> -->
+                     </div>
+                  </div>
                   </div>
                </div>
             </div>
@@ -412,72 +377,6 @@
       </div> -->
       <!-- feature end  -->
 
-
-      <!-- about section  start -->
-      <div class="tp-about-2__section pt-120 pb-90 p-relative fix">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-6">
-                  <div class="tp-about-2__img-wrapper p-relative">
-                     <div class="tp-about-2__img w-img mb-30">
-                        <img src="assets/img/about/about-2.1.png" alt="">
-                     </div>
-                     <div class="tp-about-2-shapes">
-                        <div class="tp-about-2__shapes-1">
-                           <img src="assets/img/icons/dots-shapes-2.png" alt="">
-                        </div>
-                        <div class="tp-about-2__shapes-2 ">
-                           <img src="assets/img/icons/theme-circle.png" alt="">
-                        </div>
-                        <div class="tp-about-2__shapes-7 ">
-                           <img src="assets/img/icons/about-tag.png" alt="">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="tp-about-2__right ml-110">
-                     <div class="tp-section__title-wrapper">
-                        <h3 class="tp-section__title mb-15">Not Sure Where to Begin?
-                           Take Our Quiz.</h3>
-                        <p class="mb-40">Lorem ipsum dolor sit amet, consectetur aliqua adipiscing
-                           elit, sed do eiumod tempor.</p>
-
-                        <div class="tp-about-2__feature-list mb-10">
-                           <ul>
-                              <li><span><i class="fa-light fa-user-group"></i></span>Skilled Teachers</li>
-                              <li><span><i class="fa-light fa-file-pen"></i></span>Efficient & Flexible</li>
-                              <li><span><i class="fa-light fa-chart-pie-simple"></i></span>Lifetime Access</li>
-                              <li><span><i class="fa-light fa-bars-progress"></i></span>Affordable Courses</li>
-                           </ul>
-                        </div>
-                        <div class="tp-hero__btn-wrappper">
-                           <a href="about-us.html" class="tp-btn">
-                              <span>Get Started <i class="fa-regular fa-arrow-right"></i></span>
-                              <div class="transition"></div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
-
-         </div>
-         <div class="tp-about-2__shapes">
-            <div class="tp-about-2__shapes-8">
-               <img src="assets/img/icons/lines-shape.png" alt="">
-            </div>
-            <div class="tp-about-2__shapes-3">
-               <img src="assets/img/icons/role-shape-2.png" alt="">
-            </div>
-            <div class="tp-about-2__shapes-4 ">
-               <img src="assets/img/icons/book-blue.png" alt="">
-            </div>
-         </div>
-      </div>
-      <!-- about section end  -->
-
       <!-- course start  -->
       <div class="tp-courses-2__section grey-bg-2 pt-120 pb-90">
          <div class="container">
@@ -508,7 +407,7 @@
                         <div class="tp-courses-2__content white-bg">
                            <div class="tp-courses-2__meta d-flex justify-content-between align-items-center">
                               <span class="tp-courses-2__cat cat-color-1"><a href="#">Web Design</a></span>
-                              <span class="tp-courses-2__price">$59.65</span>
+                              <!--<span class="tp-courses-2__price">$59.65</span>-->
                            </div>
                            <h3 class="tp-courses-2__title"><a href="course-details.html">The business Intelligence analyst
                                  Course
@@ -517,7 +416,7 @@
                               <div class="tp-courses-2__sub">
                                  <span><i class="far fa-book-alt"></i>9x Lesson</span>
                               </div>
-                              <div class="tp-courses-2__review">
+<!--                              <div class="tp-courses-2__review">
                                  <span>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -526,7 +425,7 @@
                                     <i class="fas fa-star-half-alt"></i>
                                  </span>
                                  <span>(20 votes)</span>
-                              </div>
+                              </div>-->
                            </div>
                         </div>
                      </div>
@@ -540,7 +439,7 @@
                            <div class="tp-courses-2__meta d-flex justify-content-between align-items-center">
                               <span class="tp-courses-2__cat cat-color-2"><a
                                     href="course-list.html">Development</a></span>
-                              <span class="tp-courses-2__price">$59.65</span>
+                              <!--<span class="tp-courses-2__price">$59.65</span>-->
                            </div>
                             <h3 class="tp-courses-2__title"><a href="course-details.html">Become a product Manager learn the
                                  skills</a>
@@ -549,7 +448,7 @@
                               <div class="tp-courses-2__sub">
                                  <span><i class="far fa-book-alt"></i>56x Lesson</span>
                               </div>
-                              <div class="tp-courses-2__review">
+<!--                              <div class="tp-courses-2__review">
                                  <span>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -558,7 +457,7 @@
                                     <i class="fas fa-star-half-alt"></i>
                                  </span>
                                  <span>(176 votes)</span>
-                              </div>
+                              </div>-->
                            </div>
                         </div>
                      </div>
@@ -572,7 +471,7 @@
                            <div class="tp-courses-2__meta d-flex justify-content-between align-items-center">
                               <span class="tp-courses-2__cat cat-color-3"><a href="course-list.html">Web
                                     Design</a></span>
-                              <span class="tp-courses-2__price">$59.65</span>
+<!--                              <span class="tp-courses-2__price">$59.65</span>-->
                            </div>
                             <h3 class="tp-courses-2__title"><a href="course-details.html">Bases Matemáticas dios Álgebra
                                  Ecuacion</a>
@@ -581,7 +480,7 @@
                               <div class="tp-courses-2__sub">
                                  <span><i class="far fa-book-alt"></i>147x Lesson</span>
                               </div>
-                              <div class="tp-courses-2__review">
+<!--                              <div class="tp-courses-2__review">
                                  <span>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -590,7 +489,7 @@
                                     <i class="fas fa-star-half-alt"></i>
                                  </span>
                                  <span>(16 votes)</span>
-                              </div>
+                              </div>-->
                            </div>
                         </div>
                      </div>
@@ -894,13 +793,13 @@
                         <div class="tp-team-2__info">
                            <h3 class="tp-team-2__name"><a href="instructor-2.html">Andra Flatcher</a></h3>
                            <span class="tp-team-2__pro">Teacher MBA</span> <br>
-                           <span class="tp-team-2__ratting">
+<!--                           <span class="tp-team-2__ratting">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                           </span>
+                           </span>-->
                         </div>
                      </div>
                   </div>
@@ -917,13 +816,13 @@
                         <div class="tp-team-2__info">
                            <h3 class="tp-team-2__name"><a href="instructor-2.html">Jessica Paeker</a></h3>
                            <span class="tp-team-2__pro">Teacher CSE</span> <br>
-                           <span class="tp-team-2__ratting">
+<!--                           <span class="tp-team-2__ratting">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                           </span>
+                           </span>-->
                         </div>
                      </div>
                   </div>
@@ -940,13 +839,13 @@
                         <div class="tp-team-2__info">
                            <h3 class="tp-team-2__name"><a href="instructor-2.html">Morgan Key</a></h3>
                            <span class="tp-team-2__pro">Teacher MBA</span> <br>
-                           <span class="tp-team-2__ratting">
+<!--                           <span class="tp-team-2__ratting">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                           </span>
+                           </span>-->
                         </div>
                      </div>
                   </div>
@@ -963,13 +862,13 @@
                         <div class="tp-team-2__info">
                            <h3 class="tp-team-2__name"><a href="instructor-2.html">Melissa Jones</a></h3>
                            <span class="tp-team-2__pro">Course Mentor</span> <br>
-                           <span class="tp-team-2__ratting">
+<!--                           <span class="tp-team-2__ratting">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                           </span>
+                           </span>-->
                         </div>
                      </div>
                   </div>
@@ -1117,6 +1016,14 @@
    <script src="assets/js/imagesloaded-pkgd.js"></script>
    <script src="assets/js/ajax-form.js"></script> <script src="assets/js/countdown.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/angularjs/dependency/angular.min.js"></script>
+   <script src="assets/js/angularjs/dependency/ng-table.min.js"></script>
+   <script src="assets/js/angularjs/dependency/sweetAlert.js"></script>
+   <script src="assets/js/angularjs/dependency/sweetalert.min.js"></script>
+   <script src="assets/js/angularjs/dependency/angular-route.js"></script>
+   <script src="assets/js/angularjs/dependency/angular-datatables.min.js"></script>
+   <script src="assets/js/angularjs/app.js"></script>
+   <script src="assets/js/angularjs/controller/"></script>
 </body>
 
 </html>
